@@ -3,6 +3,10 @@ const Schema = mongoose.Schema;
 const Order = require("./Orders");
 
 let UserSchema = new Schema({
+  role: {
+    type: String,
+    //Admin, Manager, Customer, None
+  },
   firstName: {
     type: String,
   },
