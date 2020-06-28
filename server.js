@@ -23,7 +23,6 @@ mongoose.connect(
 const apiRouter = require("./Routes/apiRoutes");
 app.use("/", apiRouter);
 
-app,
-  listen(PORT, () => {
-    console.log(`listening at: http://localhost:${PORT}`);
-  });
+app.listen(PORT, () => {
+  console.log(`listening at: http://localhost:${PORT}`);
+});

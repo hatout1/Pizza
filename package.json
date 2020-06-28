@@ -1,0 +1,33 @@
+{
+  "name": "ParkerPizza",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client/ && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hatout1/Pizza.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hatout1/Pizza/issues"
+  },
+  "homepage": "https://github.com/hatout1/Pizza#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.20",
+    "nodemon": "^2.0.4"
+  }
+}
